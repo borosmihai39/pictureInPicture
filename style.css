@@ -1,10 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 html {
-    /* prevents padding from adding extre width or height - does not add horizontal scroll bar */
-    box-sizing: border-box; 
+  /* prevents padding from adding extre width or height - does not add horizontal scroll bar */
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh; 
-    background-color:red;
+  /* remove 10px of whitespace with margin 0 */
+  margin: 0;
+  /* we want the height of the body to at least be the entire height of the screen */
+  min-height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.button-container {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 7px;
+  /* 3d effect */
+  /* inset means shadow is going to be on the inside of the object */
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: flex-end;
+}
+
+#choose-another {
+  font-size: 18px;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Bebas Neue", cursive;
+  width: 120px;
+  height: 75px;
+  font-size: 25px;
+  color: whitesmoke;
+  text-shadow: 0 2px 5px black;
+  background: linear-gradient(to top, gray, #575757);
+  border: 2px solid black;
+  border-radius: 7px;
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4),
+    0 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to bottom, gray, #575757);
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
